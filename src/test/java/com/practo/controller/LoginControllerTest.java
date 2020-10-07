@@ -5,14 +5,16 @@ import static org.junit.Assert.assertEquals;
 import java.util.Optional;
 
 import org.junit.Test;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import com.practo.model.UserDto;
-
+@RunWith(SpringRunner.class)
 public class LoginControllerTest {
-	@Autowired
+	@InjectMocks
 	LoginController loginController;
 	@Test
 	public void testValidWebUser() {
